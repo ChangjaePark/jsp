@@ -70,7 +70,11 @@ public class MySQLConnection {
 		PreparedStatement pstmt = con.prepareStatement(sql);
 		pstmt.setString(1, name);
 		pstmt.setInt(2, num);
-        pstmt.executeUpdate();
+        pstmt.executeUpdate(); //실행
+        int cnt = pstmt.executeUpdate();
+        if( cnt == 1)
+        	System.out.println("갱신 성공");
+        else System.out.println("갱신 실패");
         
 	} catch (Exception e) {
 		e.printStackTrace();
@@ -92,9 +96,9 @@ public class MySQLConnection {
 	}
 	public static void main(String[] args) {
 		MySQLConnection mcon = new MySQLConnection();
-		//mcon.insertTeam("박지성", "맨유", 37, "축구선수");
+		mcon.insertTeam("박지성", "맨유", 37, "축구선수");
 		//mcon.updateTeam("강호동",1);
-		mcon.deleteTeam(5);
+		//mcon.deleteTeam(5);
 		mcon.listTeam();
 	}
 }
