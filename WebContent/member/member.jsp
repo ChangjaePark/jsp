@@ -23,6 +23,7 @@
 		open(url,"ZipCodeSearch","width=500,height=350,scrollbars=yes");
 	}
 	
+	
 </script>
 </head>
 <body bgcolor="#FFFFCC" onLoad="regFrm.id.focus()">
