@@ -6,7 +6,7 @@ public class BoardBean {
 	private String subject;
 	private String content;
 	private int pos;
-	private int dpth;
+	private int depth;
 	private int ref;
 	private String regdate;
 	private String pass;
@@ -45,11 +45,11 @@ public class BoardBean {
 	public void setPos(int pos) {
 		this.pos = pos;
 	}
-	public int getDpth() {
-		return dpth;
+	public int getDepth() {
+		return depth;
 	}
-	public void setDpth(int dpth) {
-		this.dpth = dpth;
+	public void setDepth(int depth) {
+		this.depth = depth;
 	}
 	public int getRef() {
 		return ref;
